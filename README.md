@@ -16,6 +16,7 @@ Input: JSON typed:
 {
   company:"uber",
   msg:"这是想在群里说的话"
+  user: "chaoran@uber.com"
 }
 Return:True/False
 Description: 广播msg
@@ -25,6 +26,7 @@ Input: JSON typed:
 {
   edu:"illinois",
   msg:"这是想在群里说的话"
+  user: "chaoran@illinois.edu"
 }
 Return:True/False
 Description: 广播msg
