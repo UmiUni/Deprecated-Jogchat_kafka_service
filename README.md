@@ -15,8 +15,9 @@ POST /kafka/company/broadcast
 Input: JSON typed:
 {
   company:"uber",
-  msg:"这是想在群里说的话"
-  user: "chaoran@uber.com"
+  msg:"这是想在群里说的话",
+  user: "chaoran@uber.com",
+  timestamp: $TIMESTAMP
 }
 Return:True/False
 Description: 广播msg
@@ -26,7 +27,8 @@ Input: JSON typed:
 {
   edu:"illinois",
   msg:"这是想在群里说的话"
-  user: "chaoran@illinois.edu"
+  user: "chaoran@illinois.edu",
+  timestamp: $TIMESTAMP
 }
 Return:True/False
 Description: 广播msg
@@ -51,6 +53,8 @@ Description: suberscribe edu user to company topic
 GET /kafka/company/pollmsg
 Input: JSON typed:
 {
+  startTime:""
+  endTIme:""
   company:"uber",
   username:"chaoran@uber.com"
 }
@@ -60,6 +64,8 @@ Description: get company msg user subscribed to
 GET /kafka/edu/pollmsg
 Input: JSON typed:
 {
+  startTime:""
+  endTIme:""
   company:"illinois",
   username:"wang374@uber.com"
 }
