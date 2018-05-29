@@ -50,7 +50,10 @@ Input: JSON typed:
 }
 Description: suberscribe edu user to company topic
 
-GET /kafka/company/pollmsg
+
+
+***************Push to backend microservice endpoints********************************
+PUSH /kafka/company/pushmsg
 Input: JSON typed:
 {
   startTime:""
@@ -61,7 +64,7 @@ Input: JSON typed:
 Return: msgList
 Description: get company msg user subscribed to 
 
-GET /kafka/edu/pollmsg
+PUSH /kafka/edu/pushmsg
 Input: JSON typed:
 {
   startTime:""
@@ -69,6 +72,7 @@ Input: JSON typed:
   company:"illinois",
   username:"wang374@uber.com"
 }
+*************************************************
 Return: msgList
 Description: get edu msg user subscribed to 
 
