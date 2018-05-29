@@ -52,7 +52,7 @@ Input: JSON typed:
   company:"uber",
   username:"chaoran@uber.com"
 }
-Return: msg
+Return: msgList
 Description: get company msg user subscribed to 
 
 GET /kafka/edu/pollmsg
@@ -61,7 +61,7 @@ Input: JSON typed:
   company:"illinois",
   username:"wang374@uber.com"
 }
-Return: msg
+Return: msgList
 Description: get edu msg user subscribed to 
 
 
