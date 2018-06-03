@@ -1,16 +1,21 @@
 # Jogchat_kafka_service
 This is a mircroservice providing abilities to create, get, subscribe to company, edu topics
 
+```
 GET   /kafka/company/
 Input: String in S&P500/Unicorn company name (e.g. intuit, uber)
 output: True/False
 Description: get whether company topic already exsits
+```
 
+```
 GET   /kafka/edu/
 Input: String in edu name (illinois, stanford)
 output: True/False
 Description: get whether edu topic already exsits
+```
 
+```
 POST /kafka/company/broadcast
 Input: JSON typed:
 {
@@ -21,7 +26,9 @@ Input: JSON typed:
 }
 Return:True/False
 Description: 广播msg
+```
 
+```
 POST /kafka/edu/broadcast
 Input: JSON typed:
 {
@@ -32,7 +39,9 @@ Input: JSON typed:
 }
 Return:True/False
 Description: 广播msg
+```
 
+```
 POST /kafka/company/subscribe
 Input: JSON typed:
 {
@@ -41,7 +50,9 @@ Input: JSON typed:
 }
 Return:True/False,
 Description: suberscribe company user to company topic
+```
 
+```
 POST /kafka/edu/subscribe
 Input: JSON typed:
 {
@@ -49,10 +60,12 @@ Input: JSON typed:
   username:"wang374@illinois.edu"
 }
 Description: suberscribe edu user to company topic
+```
 
 
 
 ***************Push to backend microservice endpoints********************************
+```
 PUSH /kafka/company/pushmsg
 PUSH: JSON typed:
 {
@@ -61,9 +74,11 @@ PUSH: JSON typed:
   company:"uber",
   username:"chaoran@uber.com"
 }
+```
 
 Description: get company msg user subscribed to 
 
+```
 PUSH /kafka/edu/pushmsg
 PUSH: JSON typed:
 {
@@ -72,6 +87,7 @@ PUSH: JSON typed:
   company:"illinois",
   username:"wang374@uber.com"
 }
+```
 *************************************************
 
 
